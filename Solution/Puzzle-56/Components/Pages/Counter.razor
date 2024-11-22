@@ -1,0 +1,19 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @MyCounter.Count</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+
+	private ICounter MyCounter = new TheCounter();
+
+	private void IncrementCount()
+	{
+		MyCounter.Increment();
+	}
+}
